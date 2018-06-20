@@ -1,0 +1,109 @@
+% tudscrartcl inludes:
+%	- koma-scipt
+%	- typearea
+%	- scrlayer-scrpage
+%	- scrbase
+%	- kvsetkeys
+%	- etoolbox
+%	- geometry
+%	- textcase
+%	- trimspaces
+%	- graphicx
+%	- xcolor
+%	- environ
+% manipulation via: \PassOptionsToPackage{option}{package}
+\documentclass[ngerman]{tudscrartcl}
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{10pt}
+%%	\setlength{\baselineskip}{value}			% 1.0-single, 1.3-one and a half, 1.6-double
+
+% corporate design demands the OpenSans package % needs lualatex
+\usepackage{fontspec}
+	\setmainfont[
+				 Ligatures		= TeX,
+				 ItalicFont 	= OpenSans-Italic,
+				 BoldFont		= OpenSans-Bold,
+				 BoldItalicFont = OpenSans-BoldItalic
+				 ]{OpenSans-Regular}
+
+% standard font incl. special letter
+%\usepackage[utf8]{inputenc}
+
+% set german as native language
+\usepackage{babel}
+\usepackage{ziffer}
+
+% fits block type settings
+\usepackage{microtype}
+
+% consitent underlining
+\usepackage{ulem}
+
+% utilise \captionof{}{}
+\usepackage{capt-of}
+
+% introduces enumerations, itemisations and descriptions
+\usepackage{enumerate}
+%\usepackage{enumitem}
+%	\noitemsep
+
+% math environment
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\DeclareMathSizes{18}{18}{18}{18}
+%\usepackage[scaled=2]{helvet}
+
+% SI units
+\usepackage{siunitx}
+	\sisetup{
+%		list-final-separator	= {und schließlich},
+%		list-pair-separator		= {und},
+%		range-phrase			= {--},
+%		range-units				= {single},
+%		output-decimal-marker	= {,},
+		locale					= {DE},
+		input-decimal-markers	= {,},
+		input-ignore			= {.},
+		group-separator			= {\,},
+%		group-minimum-digits	= {3}
+		}
+
+% clean tables
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+	\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%	\def\tabularxcolumn#1{m{#1}}
+%\usepackage{dcolumn}
+%	\newcolumntype{d}[1]{D{.}{.}{#1}}
+	\renewcommand{\arraystretch}{1.5}
+\usepackage{booktabs}
+
+% demands casted fig and tab to appear before the next section starts
+\usepackage[section]{placeins}
+
+% glossary, acronyms, sorting and indexing
+\usepackage[
+			acronym,
+			toc,
+			section,
+%			style=altlist
+%			automake,
+			]{glossaries}
+	\newglossary[slg]{symbolslist}{syi}{syg}{Formelzeichen}
+	\makeglossaries
+
+% links in toc - always load at the end
+\usepackage[hidelinks]{hyperref}
+
+% to imbed picturs in the text
+\usepackage{wrapfig} 
+%\usepackage{floatflt}
+
+% to write reaction equations
+\usepackage [version=3] {mhchem}
+
+
+

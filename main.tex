@@ -1,0 +1,64 @@
+\input{latex-files/preamble}		% \input imports commands like written driectly
+%============================================================================================================
+
+\input{latex-files/glossary}
+%============================================================================================================
+
+\begin{document}
+	% --- Frontpage -----------------------------------------------------------------------------------------
+	\TUDoption{cd}{lightcolor}%false/true,light-/bar-/bi-/full-/color
+	\TUDoption{cdhead}{wide,bicolor}%false/true,heavy,no-/light-/bar-/bi-/color,slim/wide,no-/date
+%	\TUDoption{cdmath}{true}
+%	\TUDoption{cdchapter}{true}
+	
+	\faculty{Fakultät Maschinenwesen}
+%	\department{}
+	\institute{Institut für Energietechnik}
+	\chair{Professur für Wasserstoff- und Kernenergietechnik}
+	\date{\today}
+	\author{Dr. C. Lange}
+	\title{Reaktorpraktikum - Versuch: Bragg-Streuung}
+	\headlogo{pics/Logo_WKET_weiss.eps}
+	
+	\pagenumbering{gobble}
+	\maketitle
+	
+	\begin{figure*}[!htb]
+		\centering
+		\includegraphics[width=0.6\linewidth]{pics/akr_model.png}
+	\end{figure*}
+	
+	\newpage
+	
+	% --- ToC -----------------------------------------------------------------------------------------------
+	\pagenumbering{arabic}
+	\tableofcontents	% needs also the pages before the toc; how to?
+	\newpage
+	
+	% --- Acronyms ------------------------------------------------------------------------------------------
+	\printglossary[type=\acronymtype, title=Akronyme, nonumberlist]
+	\printglossary[type=symbolslist, nonumberlist]
+	\glsaddall
+	\newpage
+	
+	% --- Inhalt --------------------------------------------------------------------------------------------
+	\input{latex-files/ziele_motivation}
+	\input{latex-files/aufgabenstellung}
+	\input{latex-files/theorie}
+	\input{latex-files/durchfuehrung}
+	\input{latex-files/auswertung}
+	\input{latex-files/hinweise}
+	\input{latex-files/fragen} % \include comes with clearpage commands, etc.
+	\newpage
+	
+	% --- Appendix ------------------------------------------------------------------------------------------
+		
+	\listoffigures
+	
+	\listoftables
+	
+	\nocite{*}
+	
+	\bibliographystyle{unsrtdin}
+	\bibliography{latex-files/prakt_reaktorstart}
+\end{document}

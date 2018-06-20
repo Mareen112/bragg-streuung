@@ -1,0 +1,63 @@
+\section{Theorie}
+
+\subsection{Detektion der Neutronen}
+
+genutzte Quellen: \cite{PRuD,He3_vacutec}
+
+Zur Detektion von ionisierender Strahlung werden oft Zählrohre verwendet. Es existieren Ionisationskammern,  Proportional-  und Geiger-Müller-Zählrohre. Sie folgen alle einem ähnlichen Aufbau, arbeiten jedoch bei unterschiedlichen Spannungen.  Dies kann an der Zählrohrcharakteristik verdeutlicht werden. Sie zeigt die Abhängigkeit der Anzahl der gemessenen Impulse von der  Zählrohrspannung. Zu sehen sind verschiedene Bereiche:
+
+%\begin {wrapfigure} [Zeilenanzahl, die um Bild fließen sollen] {Position, l = links, r = rechts} [Randüberhang] {Breite}
+
+\begin{wrapfigure} {R} {10cm}
+	\includegraphics [width=10cm] {pics/Kennlinie_Zaehlrohr.png}
+	\caption {Zählrohrcharakteristik\protect\footnotemark }
+\end{wrapfigure}
+\footnotetext {Bild aus: \url{https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kennlinie_Zaehlrohr-GER.svg/720px-Kennlinie_Zaehlrohr-GER.svg.png}  [06.06.2018 21:31 Uhr]}
+
+%\begin{floatingfigure} [r] {10 cm}
+%	\centering
+%	\includegraphics {pics/Kennlinie_Zaehlrohr.png}
+%	\caption {Zählrohrcharakteristik}
+%\end{floatingfigure}
+
+\begin{description}
+	\item[Bereich I: Rekombination] Die Spannung zwischen Kathode und Anode ist so gering, dass ein Teil der Elektronen auf dem Weg zur Anode mit den Ionen im Zählgas rekombinieren. Oft ist es hier nicht einmal möglich, eine Messung durchzuführen.  
+	
+\end{description}
+\begin{description}
+
+	\item[Bereich II: Sättigungsbereich] Die Spannung ist groß genug, sodass alle durch die Strahlung direkt erzeugten Elektronen (Primärelektronen) die Anode erreichen. 
+	
+	
+	In diesem Spannungsbereich werden Ionisationskammern betrieben. Anhand der erreichten Impulshöhe/Ladungsmenge lassen sich Rückschlüsse auf die Art und Energie der eingetroffenen Teilchen schließen. 
+	
+	\item[Bereich III: Proportionalbereich] Wird die Spannung weiter erhöht, wird es den beschleunigten Primärelektronen möglich, weitere Gasmoleküle durch Zusammenstoß zu ionisieren (Stoßionisation), wodurch sogenannte Sekundärelektronen entstehen. Die stattfindende Sekundärionisation ist in diesem Bereich proportional zur primären Ionisation. Dadurch ist es auch hier möglich, Rückschlüsse auf Art und Energie der einfallenden Teilchen zu ziehen. In diesem Bereich werden Proportionalzählerrohre wie der in diesem Experiment verwendete He3-Detektor betrieben.
+	
+	\item [Bereich IV: Auslösch- oder Plateaubereich] Durch weitere Erhöhung der Spannung erreicht man einen Bereich, in dem die Sekundärionisation Lawinencharakter annimmt. Während es im Bereich III nur den energiereicheren Elektronen möglich war, Sekundärelektronen zu erzeugen, produziert nun jedes Primärelektron produziert hierbei eine Lawine von Sekundärelektronen. Daher erhöht sich die Anzahl der gezählten Impulse nicht mehr merklich, wenn die Spannung weiter steigt, da alle einfallenden Teilchen detektiert werden. Es ist nur noch eine reine Zählung möglich, Art und Energie der einfallenden Teilchen können nicht mehr bestimmt werden. In diesem Spannungsbereich werden Geiger-Müller-Zählrohre betrieben. 
+	\item [Bereich V: Dauerentladung]
+\end{description}
+
+Zur Messung der gestreuten Neutronen wird ein Helium3 (3He)- Detektor verwendet. Bei Neutronen handelt es sich um ungeladene Teilchen. Um sie nachweisen zu können, müssen aus ihnen erst durch Wechselwirkung mit Materie geladene Teilchen erzeugt werden, die sich mithilfe eines elektrischen Feldes beschleunigen und schließlich messen lassen. Im vorliegende Detektor wird dies durch eine Wechselwirkung des He3 mit den Neutronen realisiert, die bei Neutronenenergien unter 20 MeV stattfindet: 
+\ce{n + ^3He -> p + ^3He}
+Der Detektor selbst arbeitet als Proportionalzählrohr. Dies besteht aus einem metallischen, zylindrischen Rohr und einem auf der Zylinderachse befindlichen Metalldraht. Zwischen dem Rohr (Kathode) und dem Metalldraht (Anode) wird eine Spannung angelegt, sodass ein elektrisches Feld im Inneren des Rohrs entsteht. Das Rohr selbst ist mit einem Zählgas gefüllt, in diesem Fall mit Helium-3. Die Neutronen wechselwirken mit dem Helium wie oben beschrieben und erzeugen ein Proton und ein Tritiumatom. Diese geladenen Teilchen sind nun in der Lage, Gasatome zu ionisieren. Dadurch werden Elektronen frei, die zur Anode wandern. Die Arbeitsspannung des elektrischen Feldes ist entsprechend so gewählt, dass einige Elektronen in der Lage sind, weitere Gasatome zu ionisieren, wodurch Sekundärelektronen entstehen. Die Elektronen, die die Anode erreichen, erzeugen dort einen Strompuls, der über einen Widerstand in eine Spannung umgewandelt wird, die dann elektronisch weiterverarbeitet und gezählt werden kann. 
+
+Die Effizienz des Detektors berechnet sich nach näherungsweise nach folgender Formel:
+
+\begin{equation}
+	\epsilon = 1-e^{-\sum_{a} (E) L}
+\end{equation}
+
+Für eine exakte Messung mittels des He3-Detektors muss eine günstige Arbeitsspannung gefunden werden. In der oben erwähnten Zählrohrcharakteristik ist der generelle Spannungsverlauf im Proportionalbereich ersichtlich. Wir wollen im Folgenden etwas genauer darauf eingehen. 
+
+
+
+
+%\begin{itemize}
+%	\item Brennstoffabbrand,
+%	\item Vergiftung des Brennstoffs oder
+%	\item Temperatureffekte
+%\end{itemize}
+
+%während der Versuchsdauer praktisch vernachlässigt werden können. Damit entspricht jeder Start eines solchen Nullleistungsreaktors einem Kaltstart eines Leistungsreaktors hinsichtlich des nuklearen Teils dieser Anlage.
+
+
